@@ -1,0 +1,15 @@
+function fetchData() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("the data has loaded");
+        }, 5000);
+    });
+}
+
+async function displayData() {
+    console.log("Loading...");
+    let result = await fetchData();
+    console.log(result);
+}
+
+displayData();
